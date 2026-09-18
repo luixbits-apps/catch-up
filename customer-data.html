@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Team Feed: data and retention</title><link rel="stylesheet" href="style.css"></head><body>
+<header><p>Team Feed for Confluence</p><nav><a href="index.html">Home</a><a href="user-guide.html">Getting started</a><a href="support.html">Support</a><a href="customer-data.html">Data &amp; retention</a><a href="privacy-notice.html">Privacy</a><a href="customer-terms.html">Terms</a><a href="data-processing-agreement.html">DPA</a></nav></header>
+<main>
+<h1>Team Feed: data and retention</h1>
+<h2>What Team Feed stores</h2>
+<p>Team Feed uses Atlassian Forge storage for each installation. It stores:</p>
+<ul>
+<li>Feed settings, access grants, audience roles, posts, comments and revision
+history.</li>
+<li>Atlassian account identifiers for membership and attribution.</li>
+<li>Your seen revisions, saved posts and reading place. These are private to you
+in normal app views and are excluded from the feed export.</li>
+<li>Source links, titles, version identifiers and selected update descriptions;
+repository paths, publication rules and checkpoints needed to prevent
+duplicates.</li>
+<li>Repository publisher signing keys in Forge secret storage, plus limited work
+records and error information needed to recover failed updates.</li>
+</ul>
+<p>Original Confluence pages, attachments and Git files stay in their source
+system. The app does not store a repository clone. Repository excerpts are off by
+default; an owner can explicitly approve a bounded excerpt. Text people add to
+posts, comments or update descriptions may itself contain personal or
+confidential data.</p>
+<p>Display names are retrieved from Confluence when needed and are not saved in
+the app database. The browser remembers your last selected feed and a visit
+identifier; clearing browser storage removes these local shortcuts, not the
+reading state stored by the app. The installed app has no third-party analytics
+or AI service.</p>
+<h2>Who can read it</h2>
+<p>Feed membership controls access; audience labels only filter relevance.
+Confluence posts also require current access to their linked source. Repository
+publication shares the approved metadata with the reviewed feed audience; it does
+not check each reader's repository membership. Opening the repository link still
+requires source access. Review recipients before enabling a publisher.</p>
+<p>Forge hosts the app and its storage. Optional publisher jobs run in your Azure
+DevOps or GitHub environment and send selected metadata to the app's signed
+endpoint. No separately operated Team Feed application server is used. Support
+email is a separate channel; send only the information needed to resolve a
+request.</p>
+<h2>How long posts stay</h2>
+<p>An app administrator chooses <strong>Manage workspace → Post lifetime</strong>.
+The default is <strong>60 days, then archive</strong>; the allowed setting is
+1–3,650 days. The policy also applies to existing posts, measured from their
+original publication date.</p>
+<p>Archive removes a post from the normal timeline while keeping its discussion
+and personal state. Delete permanently removes the post, its discussion and
+associated reading state through background cleanup. Once deletion starts,
+changing the policy cannot undo it. Original documents remain intact.</p>
+<p>Archive retains storage. Post lifetime does not remove feed configuration,
+account records or the minimal source identities needed to prevent replay from
+recreating deleted posts. An expired license pauses automatic publication;
+configured lifetime maintenance continues.</p>
+<h2>Export, uninstall and requests</h2>
+<p>An authorized owner can export accessible feed posts and comments as JSON. The
+current limit is 100 posts and 1 MB. Private reading state is excluded, and there
+is no import/restore function. This is not a complete installation backup.</p>
+<p>Uninstalling is separate from post deletion. Atlassian currently retains Forge
+hosted storage for 28 days after uninstall; reinstalling does not automatically
+restore it. Recovery needs your consent and a developer support request within
+21 days of uninstall. Contact us promptly with your site and uninstall date;
+recovery is not guaranteed
+(<a href="https://developer.atlassian.com/platform/forge/storage-reference/">Atlassian storage lifecycle</a>).</p>
+<p>For access, correction or deletion requests, contact
+<a href="mailto:contact@luizperren.dev">contact@luizperren.dev</a> and identify
+the relevant Confluence site. Do not include private document contents or
+credentials in the initial message. Post lifetime and account-data requests are
+separate processes. Account identifiers, private reading state and personal
+information people have written in shared content are handled through a verified,
+case-by-case procedure coordinated with your site's administrator. Automatic
+account-closure cleanup is not claimed by this release.</p>
+<p>See the <a href="privacy-notice.html">privacy notice</a> and
+<a href="data-processing-agreement.html">data-processing agreement</a> for roles,
+retention and rights.</p>
+</main>
+<footer>© 2026 Luiz Anton Perren (LuixBits), Switzerland · <a href="mailto:contact@luizperren.dev">contact@luizperren.dev</a></footer>
+</body></html>

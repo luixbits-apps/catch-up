@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Team Feed data-processing agreement</title><link rel="stylesheet" href="style.css"></head><body>
+<header><p>Team Feed for Confluence</p><nav><a href="index.html">Home</a><a href="user-guide.html">Getting started</a><a href="support.html">Support</a><a href="customer-data.html">Data &amp; retention</a><a href="privacy-notice.html">Privacy</a><a href="customer-terms.html">Terms</a><a href="data-processing-agreement.html">DPA</a></nav></header>
+<main>
+<h1>Team Feed data-processing agreement</h1>
+<p>Last updated: 18 September 2026. This agreement forms part of Team Feed's
+<a href="customer-terms.html">terms</a> and is accepted by the customer with the
+Marketplace order or installation.</p>
+<h2>Parties and instructions</h2>
+<p>Provider: <strong>Luiz Anton Perren</strong> (LuixBits), acting personally,
+Oberschönenbuch 31, 6438 Ibach, Switzerland. Customer: the organization
+identified in the Marketplace order or installation.</p>
+<p>For workspace data, the customer determines the purposes of processing and the
+provider processes data on its documented instructions. If the customer is itself
+a processor, it must have authority to appoint the provider. Support and business
+records processed for the provider's own purposes are covered separately by the
+<a href="privacy-notice.html">privacy notice</a>.</p>
+<p>Instructions comprise the agreed service, authorized settings and verified
+support requests. The provider may process data only to provide, secure and
+support that service, including instructed transfers, or as required by law. It
+will notify the customer of a conflicting legal requirement unless prohibited,
+and flag instructions it believes infringe applicable data-protection law. The
+customer is responsible for lawful collection, notices, access and publication
+instructions.</p>
+<h2>Processing inventory</h2>
+<p>Processing lasts through service provision and the applicable deletion period.
+It includes storing, displaying, updating, organizing, exporting and deleting
+data. Subjects are workspace users and people identified in submitted content.</p>
+<table>
+<tr><th>Data and purpose</th><th>Location and retention</th></tr>
+<tr><td>Account IDs, membership, grants and attribution: access and authorship</td>
+<td>Forge SQL. Current profile names are fetched without persistent caching. Kept
+while the installation uses them; removed with feed deletion/uninstall.</td></tr>
+<tr><td>Posts, comments, revisions and selected source metadata: shared updates
+and discussion</td>
+<td>Forge SQL. Default 60-day archive; configurable 1–3,650-day archive/delete
+policy. Archive retains data.</td></tr>
+<tr><td>Seen/saved/follow state, filters and reading position: private reading
+experience</td>
+<td>Forge SQL, with limited browser preferences. Post deletion removes associated
+state; verified account requests have a separate procedure.</td></tr>
+<tr><td>Signing keys, checkpoints and work records: authenticated publication,
+deduplication and recovery</td>
+<td>Forge secret storage/SQL. Minimal technical records can outlast a post but
+not the installation; removed with it.</td></tr>
+<tr><td>Approved support extracts and request evidence: instructed
+troubleshooting or privacy requests</td>
+<td>Operator-controlled files and, if necessary, Hostpoint mail, under the
+support retention policy.</td></tr>
+</table>
+<p>Customer-selected text may contain sensitive data; the service does not
+require it. Original documents remain in Confluence/Git. Optional repository jobs
+run in the customer's own GitHub/Azure environment under its provider
+arrangements. <a href="customer-data.html">Data and retention</a> gives the
+product limits.</p>
+<h2>Protection, assistance and providers</h2>
+<p>The provider will restrict access to authorized people under confidentiality
+duties, maintain appropriate technical and organizational measures, and assist
+with verified rights requests, security obligations, impact assessments and
+regulator consultation, taking account of the processing and information
+available. It will notify the customer of a personal-data breach without undue
+delay and provide information as it becomes available.</p>
+<p>Implemented controls include server-side authorization, Confluence source
+checks, signed repository requests with replay protection, encrypted signing-key
+storage, input validation and restrained logging. These controls are not a
+certification or a promise that every risk has been eliminated.</p>
+<p>General authorization covers <strong>Atlassian</strong> (Forge hosting) and,
+where support requires customer data, <strong>Hostpoint</strong> (mail). Changes
+are announced on the <a href="support.html">support page</a> at least 30 days in
+advance, with an opportunity to object by email on data-protection grounds;
+equivalent protection applies in provider contracts and the provider remains
+responsible for its subcontracted duties.</p>
+<p>Forge persistent data follows eligible site residency, but compute and
+provider support can occur elsewhere
+(<a href="https://developer.atlassian.com/platform/forge/data-residency/">Forge residency limits</a>).
+Swiss operator access and Hostpoint mail are separate.</p>
+<h2>Ending processing and review</h2>
+<p>At the customer's choice after service ends: deletion follows the disclosed
+platform periods (Forge removes hosted app data about 28 days after uninstall),
+and return is provided through the documented feed export (100 posts/1 MB,
+excluding private reading state) plus verified-request extracts. This agreement
+promises exactly these documented mechanisms, not an unlimited full-database
+return.</p>
+<p>The provider will supply compliance information and allow proportionate audits
+or inspections, protecting other customers' data.</p>
+<p>Drafting basis:
+<a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng">GDPR Article 28</a>,
+<a href="https://www.edoeb.admin.ch/en/outsourcing-of-data-processing">FDPIC outsourcing guidance</a>,
+<a href="https://developer.atlassian.com/platform/forge/about-the-forge-data-processing-addendum/">Forge DPA</a>
+(which covers the developer–Atlassian relationship and does not replace this
+customer agreement).</p>
+</main>
+<footer>© 2026 Luiz Anton Perren (LuixBits), Oberschönenbuch 31, 6438 Ibach, Switzerland · <a href="mailto:contact@luizperren.dev">contact@luizperren.dev</a></footer>
+</body></html>
